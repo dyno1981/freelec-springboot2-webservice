@@ -46,6 +46,8 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
 
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
     developmentOnly "org.springframework.boot:spring-boot-devtools"
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'

@@ -4,3 +4,4 @@
 .idea
 /src/main/generated/
 /src/test/generated_tests/
+application-oauth.properties
