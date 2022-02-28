@@ -35,7 +35,7 @@ public class HelloControllerTest {
 
     @WithMockUser(roles = "USER")
     @Test
-    public void hello가_리턴된다() throws Exception {
+    public void helloReturn() throws Exception {
         String hello = "hello";
         mvc.perform(get("/hello")) // MockMvc를 통해 /hello 주소로 HTTP GET 요청을 합니다. 체이닝이 지원되어 아래와 같이 여러 검증 기능을 이어서 선언할 수 있습니다.
                 .andExpect(status().isOk()) // mvc.perform의 결과를 검증합니다. HTTP Header의 Status를 검증합니다. (ex: 200, 404, 500 등) 여기선 OK 즉, 200인지 아닌지를 검증합니다.
@@ -44,7 +44,7 @@ public class HelloControllerTest {
 
     @WithMockUser(roles = "USER")
     @Test
-    public void helloDto가_리턴된다() throws Exception {
+    public void helloDtoReturn() throws Exception {
         String name = "hello";
         int amount = 1000;
 
