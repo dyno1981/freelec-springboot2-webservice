@@ -24,47 +24,67 @@ repositories {
     mavenCentral()
 }
 
-configurations {
-    developmentOnly
-    runtimeClasspath {
-        extendsFrom developmentOnly
-    }
-}
-
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.projectlombok:lombok')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
+    implementation('com.h2database:h2')
 
-    implementation 'org.projectlombok:lombok'
-    testImplementation 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    implementation('org.springframework.session:spring-session-jdbc')
 
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'com.h2database:h2'
+    implementation("org.mariadb.jdbc:mariadb-java-client")
 
-    implementation 'org.springframework.boot:spring-boot-starter-mustache'
-
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-    implementation 'org.springframework.session:spring-session-jdbc'
-
-    implementation "org.mariadb.jdbc:mariadb-java-client"
-
-    developmentOnly "org.springframework.boot:spring-boot-devtools"
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-    testImplementation "org.springframework.security:spring-security-test"
-
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation("org.springframework.security:spring-security-test")
 }
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
-
-test {
-    useJUnitPlatform()
-}
+//repositories {
+//    mavenCentral()
+//}
+//
+//configurations {
+//    developmentOnly
+//    runtimeClasspath {
+//        extendsFrom developmentOnly
+//    }
+//}
+//
+//dependencies {
+//    implementation 'org.springframework.boot:spring-boot-starter-web'
+//
+//    implementation 'org.projectlombok:lombok'
+//    implementation 'junit:junit:4.13.1'
+//    testImplementation 'org.projectlombok:lombok'
+//    annotationProcessor 'org.projectlombok:lombok'
+//    testAnnotationProcessor 'org.projectlombok:lombok'
+//
+//    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    implementation 'com.h2database:h2'
+//
+//    implementation 'org.springframework.boot:spring-boot-starter-mustache'
+//
+//    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+//    implementation 'org.springframework.session:spring-session-jdbc'
+//
+//    implementation "org.mariadb.jdbc:mariadb-java-client"
+//
+//    developmentOnly "org.springframework.boot:spring-boot-devtools"
+//
+//    testImplementation "org.springframework.security:spring-security-test"
+//
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+//}
+//
+//configurations {
+//    compileOnly {
+//        extendsFrom annotationProcessor
+//    }
+//}
+//
+//test {
+//    useJUnitPlatform()
+//}
