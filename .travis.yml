@@ -16,11 +16,11 @@ script: "./gradlew clean build"
 
 before_install:
   - chmod +x gradlew
-
+  -
 before_deploy:
   - zip -r freelec-springboot2-webservice *
-  - mkdir -p deploy
-  - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
+    - mkdir -p deploy
+    - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
 
 deploy:
   - provider: s3
@@ -44,7 +44,7 @@ deploy:
     region: ap-northeast-2
     wait-until-deployed: true
 
-    # CI 실행 완료시 메일로 알람
+# CI 실행 완료시 메일로 알람
 notifications:
   email:
     recipients:
